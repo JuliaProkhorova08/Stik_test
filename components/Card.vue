@@ -46,6 +46,8 @@
     </picture>
   </div>
 
+  <div class="hero__container">
+
   <div class="hero__wrapper">
 
     <div class="hero__info">
@@ -92,6 +94,16 @@
     </div>
   </div>
 
+  <div class="hero__buy">
+    <button>Добавить в корзину</button>
+    <picture>
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="43" height="43" stroke="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 14H28.5V31.4819L22.0134 27.1182L15.5 31.4819V14ZM16.5 15V29.5181L22.0134 25.8818L27.5 29.5181V15H16.5Z" fill="black"/>
+</svg>
+    </picture>
+  </div>
+
   <ul class="hero__description description">
     <li class="description__item">
       <button class="description__item description__item--button">Описание</button>
@@ -100,7 +112,7 @@
       <button class="description__item description__item--button">Состав и уход</button>
     </li>
   </ul>
-
+</div>
 </div>
 </template>
 
@@ -148,6 +160,11 @@
   justify-content: space-between;
   margin-top: 26px;
   margin-bottom: 36px;
+
+  @media (min-width: 1440px) {
+    margin-top: 0;
+    margin-bottom: 31px;
+  }
 }
 
 .hero__list {
@@ -180,9 +197,15 @@
 }
 
 .hero__size p {
+  margin: 0;
+  margin-bottom: 9px;
   font-size: 10px;
   line-height: 14px;
   color: #4f4f4f;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 8px;
+  }
 }
 
 .hero__sizes {
@@ -224,6 +247,10 @@ grid-template-rows: 31px;
 height: 18px;
   margin: 0;
   margin-bottom: 34px;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 36px;
+  }
 }
 
 .hero__sizestext--item:nth-child(1) {
@@ -241,6 +268,10 @@ height: 18px;
 .hero__color {
   margin-bottom: 32px;
   padding: 0 16px;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 36px;
+  }
 }
 
 .hero__color p {
@@ -283,6 +314,29 @@ height: 18px;
 
 .hero__colors--beige {
   background-color: #f9f1dc;
+}
+
+.hero__buy {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: 290px 44px;
+grid-template-rows: 44px;
+grid-column-gap: 10px;
+grid-row-gap: 0px;
+padding: 0 16px;
+margin-bottom: 40px;
+  }
+}
+
+.hero__buy button {
+  padding: 0;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000000;
 }
 
 .hero__description {
