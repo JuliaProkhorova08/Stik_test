@@ -92,6 +92,15 @@
     </div>
   </div>
 
+  <ul class="hero__description description">
+    <li class="description__item">
+      <button class="description__item description__item--button">Описание</button>
+    </li>
+    <li class="description__item">
+      <button class="description__item description__item--button">Состав и уход</button>
+    </li>
+  </ul>
+
 </div>
 </template>
 
@@ -275,5 +284,69 @@ height: 18px;
 .hero__colors--beige {
   background-color: #f9f1dc;
 }
+
+.hero__description {
+  padding: 0 16px;
+  margin: 0;
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+.description__item {
+  margin: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.description__item--button {
+  position: relative;
+  width: 343px;
+  height: 41px;
+  border: none;
+  border-bottom: 1px #E0E0E0 solid;
+  background-color: transparent;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 14px;
+  color: #333333;
+}
+
+.description__item--button::before,
+.description__item--button::after {
+position: absolute;
+content: "";
+background-color: #828282;
+    width: 9px;
+    height: 9px;
+}
+
+.description__item--button::before {
+width: 10px;
+    height: 1px;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+}
+
+.description__item--button::after {
+width: 1px;
+    height: 10px;
+
+    right: 13px;
+    transform: translateX(-50%);
+}
+
+.description__item:nth-child(1) .description__item--button {
+  padding: 0;
+  border-top: 1px #E0E0E0 solid;
+}
+
+.description__item:nth-child(2) .description__item--button {
+  padding: 0;
+  border-top: none;
+}
+
 
 </style>
