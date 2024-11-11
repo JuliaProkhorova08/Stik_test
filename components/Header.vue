@@ -162,34 +162,36 @@
 
 <style>
 .header {
-  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
 
   @media (min-width: 375px) {
-    position: fixed;
     box-sizing: border-box;
     width: 100%;
     height: 50px;
-    border: 1px solid #fff;
-    background: #fff;
+
+    background: #ffffff;
+    border: 1px solid #ffffff;
   }
+
   @media (min-width: 1440px) {
-    position: fixed;
-    box-sizing: border-box;
     width: 100%;
     height: 86px;
-    background: #fff;
+
+    background: #ffffff;
   }
 }
 
 .header__list {
-  margin-left: 16px;
-  padding: 0;
-  list-style: none;
   display: flex;
   justify-content: flex-start;
+  margin-left: 16px;
+  padding: 0;
+
+  list-style: none;
+
   gap: 12px;
 
   @media (min-width: 1440px) {
@@ -199,8 +201,8 @@
 
 .header__logo {
   @media (min-width: 375px) {
-    margin-left: 101px;
     margin-right: 132px;
+    margin-left: 101px;
   }
 
   @media (min-width: 1440px) {
@@ -228,8 +230,10 @@
 
   @media (min-width: 1440px) {
     display: flex;
-    gap: 16px;
     margin-right: 40px;
+
+    gap: 16px;
   }
 }
+
 </style>

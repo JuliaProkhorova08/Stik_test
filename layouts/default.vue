@@ -1,7 +1,9 @@
 <template>
   <div>
     <Header />
+
     <Card />
+
     <Nuxt />
   </div>
 </template>
@@ -24,7 +26,10 @@ body {
   min-width: 375px;
   min-height: 100%;
   margin: 0 auto;
-  background-color: #fff;
+
+  font-family: "Helvetica", sans-serif;
+
+  background-color: #ffffff;
 }
 
 img {
@@ -33,4 +38,5 @@ img {
 
   object-fit: scale-down;
 }
+
 </style>

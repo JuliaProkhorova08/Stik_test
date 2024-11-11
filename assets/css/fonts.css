@@ -1,0 +1,8 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Helvetica";
+
+  font-display: swap;
+  src: url("~assets/fonts/Helvetica.woff2") format("woff2"),
+    url("~assets/fonts/Helvetica.woff") format("woff");
+}

@@ -1,5 +1,33 @@
 <template>
-  <div class="card">
+<div class="hero">
+  <ul class="hero__gallery gallery">
+    <li class="gallery__item gallery__item--active">
+      <img
+        src="~assets/img/gallery-desktop-01@1x.jpg"
+        width="70"
+        height="88"
+        alt="Фото девушки в белом жакете."
+      />
+    </li>
+    <li class="gallery__item">
+      <img
+        src="~assets/img/gallery-desktop-02@1x.jpg"
+        width="70"
+        height="88"
+        alt="Фото девушки в белом жакете."
+      />
+    </li>
+    <li class="gallery__item">
+      <img
+        src="~assets/img/gallery-desktop-03@1x.jpg"
+        width="70"
+        height="88"
+        alt="Фото девушки в белом жакете."
+      />
+    </li>
+  </ul>
+
+  <div class="hero__card card">
     <picture class="card__photo">
       <source
         media="(min-width: 1440px)"
@@ -17,12 +45,83 @@
       />
     </picture>
   </div>
+
+  <div class="hero__wrapper">
+
+    <div class="hero__info">
+      <ul class="hero__list">
+    <li class="hero__item hero__item--text">
+      жакет удлинённый, белый
+    </li>
+    <li class="hero__item">
+      8900 RUB
+    </li>
+      </ul>
+      <picture class="hero__fav">
+    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 0H14V17.4819L7.51338 13.1182L1 17.4819V0ZM2 1V15.5181L7.51338 11.8818L13 15.5181V1H2Z" fill="#333333"/>
+</svg>
+
+      </picture>
+    </div>
+
+  </div>
+
+  <div class="hero__size">
+    <p>Размеры</p>
+
+    <div class="hero__sizes">
+      <p class="hero__sizes hero__sizes--item">XS</p>
+      <p class="hero__sizes hero__sizes--item">S</p>
+      <p class="hero__sizes hero__sizes--item">M</p>
+    </div>
+    <div class="hero__sizestext">
+      <p class="hero__sizestext hero__sizestext--item">мало</p>
+      <p class="hero__sizestext hero__sizestext--item">подписка</p>
+    </div>
+
+  </div>
+
+  <div class="hero__color">
+    <p>Цвет: белый</p>
+
+    <div class="hero__colors">
+      <span class="hero__colors hero__colors--white"></span>
+      <span class="hero__colors hero__colors--black"></span>
+      <span class="hero__colors hero__colors--beige"></span>
+    </div>
+  </div>
+
+</div>
 </template>
 
 <style>
-.card__photo {
+.hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+  }
+
+}
+
+.hero__gallery {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-right: 30px;
+
+    list-style: none;
+  }
+}
+
+.card__photo {
   width: 100%;
 }
 
@@ -30,4 +129,151 @@
   max-width: 100%;
   height: auto;
 }
+
+.hero__wrapper {
+  padding: 0 16px;
+}
+
+.hero__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+  margin-bottom: 36px;
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.hero__item {
+  font-size: 12px;
+  line-height: 16px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.hero__item--text {
+  margin-bottom: 8px;
+}
+
+.hero__fav {
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.hero__size {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.hero__size p {
+  font-size: 10px;
+  line-height: 14px;
+  color: #4f4f4f;
+}
+
+.hero__sizes {
+  display: grid;
+align-items: center;
+margin-bottom: 4px;
+padding: 0;
+
+font-size: 10px;
+line-height: 14px;
+text-align: center;
+
+grid-column-gap: 9px;
+grid-row-gap: 0;
+grid-template-columns: repeat(3, 65px);
+grid-template-rows: 31px;
+}
+
+.hero__sizes--item {
+  margin: 0;
+}
+
+.hero__sizes--item:nth-child(1),
+.hero__sizes--item:nth-child(2) {
+  color: #333333;
+
+  border: 1px #333333 solid;
+}
+
+.hero__sizes--item:nth-child(3) {
+  color: #bdbdbd;
+
+  border: 1px #bdbdbd solid;
+}
+
+.hero__sizestext {
+  display: flex;
+  justify-content: space-between;
+height: 18px;
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.hero__sizestext--item:nth-child(1) {
+  padding-left: 20px;
+
+  color: #828282;
+}
+
+.hero__sizestext--item:nth-child(2) {
+  padding-right: 140px;
+
+  color: #bdbdbd;
+}
+
+.hero__color {
+  margin-bottom: 32px;
+  padding: 0 16px;
+}
+
+.hero__color p {
+  margin: 0;
+  margin-bottom: 6px;
+
+  font-size: 10px;
+  line-height: 14px;
+  color: #4f4f4f;
+}
+
+.hero__colors {
+  display: flex;
+  width: 116px;
+  height: 27px;
+
+  gap: 16px;
+}
+
+.hero__colors--white {
+  background-color: #ffffff;
+  border:#bdbdbd 1px solid;
+}
+
+.hero__colors--white::after {
+  content: "";
+
+  display: block;
+  width: 28px;
+  height: 1px;
+  margin-top: 31px;
+
+  background-color: #4f4f4f;
+
+}
+
+.hero__colors--black {
+  background-color: #000000;
+}
+
+.hero__colors--beige {
+  background-color: #f9f1dc;
+}
+
 </style>
